@@ -1,0 +1,59 @@
+C:\Users\vitok\source\repos\BuscadoDesktop\BuscadoDesktop\bin\Release\BuscadoDesktop.exe.config
+C:\Users\vitok\source\repos\BuscadoDesktop\BuscadoDesktop\bin\Release\BuscadoDesktop.exe
+C:\Users\vitok\source\repos\BuscadoDesktop\BuscadoDesktop\bin\Release\BuscadoDesktop.pdb
+C:\Users\vitok\source\repos\BuscadoDesktop\BuscadoDesktop\obj\Release\BuscadoDesktop.csproj.AssemblyReference.cache
+C:\Users\vitok\source\repos\BuscadoDesktop\BuscadoDesktop\obj\Release\BuscadoDesktop.csproj.SuggestedBindingRedirects.cache
+C:\Users\vitok\source\repos\BuscadoDesktop\BuscadoDesktop\obj\Release\BuscadoDesktop.Form1.resources
+C:\Users\vitok\source\repos\BuscadoDesktop\BuscadoDesktop\obj\Release\BuscadoDesktop.Properties.Resources.resources
+C:\Users\vitok\source\repos\BuscadoDesktop\BuscadoDesktop\obj\Release\BuscadoDesktop.csproj.GenerateResource.cache
+C:\Users\vitok\source\repos\BuscadoDesktop\BuscadoDesktop\obj\Release\BuscadoDesktop.csproj.CoreCompileInputs.cache
+C:\Users\vitok\source\repos\BuscadoDesktop\BuscadoDesktop\obj\Release\BuscadoDesktop.exe
+C:\Users\vitok\source\repos\BuscadoDesktop\BuscadoDesktop\obj\Release\BuscadoDesktop.pdb
+C:\Users\vitok\source\repos\BuscadoDesktop\BuscadoDesktop\bin\Release\EntityFramework.dll
+C:\Users\vitok\source\repos\BuscadoDesktop\BuscadoDesktop\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\vitok\source\repos\BuscadoDesktop\BuscadoDesktop\bin\Release\EntityFramework.xml
+C:\Users\vitok\source\repos\BuscadoDesktop\BuscadoDesktop\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\vitok\source\repos\BuscadoDesktop\BuscadoDesktop\obj\Release\BuscadoDesktop.csproj.CopyComplete
+C:\Users\vitok\source\repos\BuscadoDesktop\BuscadoDesktop\obj\Release\BuscadoDesktop.FormCadastro.resources
+C:\Users\vitok\source\repos\BuscadoDesktop\BuscadoDesktop\obj\Release\BuscadoDesktop.FormModoEditor.resources
+C:\Users\Aluno\Desktop\BuscadoDesktop\BuscadoDesktop\bin\Release\BuscadoDesktop.exe.config
+C:\Users\Aluno\Desktop\BuscadoDesktop\BuscadoDesktop\bin\Release\BuscadoDesktop.exe
+C:\Users\Aluno\Desktop\BuscadoDesktop\BuscadoDesktop\bin\Release\BuscadoDesktop.pdb
+C:\Users\Aluno\Desktop\BuscadoDesktop\BuscadoDesktop\bin\Release\EntityFramework.dll
+C:\Users\Aluno\Desktop\BuscadoDesktop\BuscadoDesktop\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\Aluno\Desktop\BuscadoDesktop\BuscadoDesktop\bin\Release\EntityFramework.xml
+C:\Users\Aluno\Desktop\BuscadoDesktop\BuscadoDesktop\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\Aluno\Desktop\BuscadoDesktop\BuscadoDesktop\obj\Release\BuscadoDesktop.csproj.AssemblyReference.cache
+C:\Users\Aluno\Desktop\BuscadoDesktop\BuscadoDesktop\obj\Release\BuscadoDesktop.csproj.SuggestedBindingRedirects.cache
+C:\Users\Aluno\Desktop\BuscadoDesktop\BuscadoDesktop\obj\Release\BuscadoDesktop.Form1.resources
+C:\Users\Aluno\Desktop\BuscadoDesktop\BuscadoDesktop\obj\Release\BuscadoDesktop.FormCadastro.resources
+C:\Users\Aluno\Desktop\BuscadoDesktop\BuscadoDesktop\obj\Release\BuscadoDesktop.FormModoEditor.resources
+C:\Users\Aluno\Desktop\BuscadoDesktop\BuscadoDesktop\obj\Release\BuscadoDesktop.Properties.Resources.resources
+C:\Users\Aluno\Desktop\BuscadoDesktop\BuscadoDesktop\obj\Release\BuscadoDesktop.csproj.GenerateResource.cache
+C:\Users\Aluno\Desktop\BuscadoDesktop\BuscadoDesktop\obj\Release\BuscadoDesktop.csproj.CoreCompileInputs.cache
+C:\Users\Aluno\Desktop\BuscadoDesktop\BuscadoDesktop\obj\Release\BuscadoDesktop.csproj.CopyComplete
+C:\Users\Aluno\Desktop\BuscadoDesktop\BuscadoDesktop\obj\Release\BuscadoDesktop.exe
+C:\Users\Aluno\Desktop\BuscadoDesktop\BuscadoDesktop\obj\Release\BuscadoDesktop.pdb
+C:\Users\Aluno\Desktop\BuscadoDesktop\BuscadoDesktop\obj\Release\BuscadoDesktop.FormAdicionarProdutoAoBanco.resources
+C:\Users\Aluno\Desktop\BuscadoDesktop\BuscadoDesktop\obj\Release\BuscadoDesktop.FormAdicionarProduto.resources
+C:\Users\vitok\Desktop\buscado 2.0\BuscadoDesktop\BuscadoDesktop\bin\Release\BuscadoDesktop.exe.config
+C:\Users\vitok\Desktop\buscado 2.0\BuscadoDesktop\BuscadoDesktop\bin\Release\BuscadoDesktop.exe
+C:\Users\vitok\Desktop\buscado 2.0\BuscadoDesktop\BuscadoDesktop\bin\Release\BuscadoDesktop.pdb
+C:\Users\vitok\Desktop\buscado 2.0\BuscadoDesktop\BuscadoDesktop\bin\Release\EntityFramework.dll
+C:\Users\vitok\Desktop\buscado 2.0\BuscadoDesktop\BuscadoDesktop\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\vitok\Desktop\buscado 2.0\BuscadoDesktop\BuscadoDesktop\bin\Release\EntityFramework.xml
+C:\Users\vitok\Desktop\buscado 2.0\BuscadoDesktop\BuscadoDesktop\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\vitok\Desktop\buscado 2.0\BuscadoDesktop\BuscadoDesktop\obj\Release\BuscadoDesktop.csproj.AssemblyReference.cache
+C:\Users\vitok\Desktop\buscado 2.0\BuscadoDesktop\BuscadoDesktop\obj\Release\BuscadoDesktop.csproj.SuggestedBindingRedirects.cache
+C:\Users\vitok\Desktop\buscado 2.0\BuscadoDesktop\BuscadoDesktop\obj\Release\BuscadoDesktop.Form1.resources
+C:\Users\vitok\Desktop\buscado 2.0\BuscadoDesktop\BuscadoDesktop\obj\Release\BuscadoDesktop.FormAdicionarProduto.resources
+C:\Users\vitok\Desktop\buscado 2.0\BuscadoDesktop\BuscadoDesktop\obj\Release\BuscadoDesktop.FormAdicionarProdutoAoBanco.resources
+C:\Users\vitok\Desktop\buscado 2.0\BuscadoDesktop\BuscadoDesktop\obj\Release\BuscadoDesktop.FormCadastro.resources
+C:\Users\vitok\Desktop\buscado 2.0\BuscadoDesktop\BuscadoDesktop\obj\Release\BuscadoDesktop.FormModoEditor.resources
+C:\Users\vitok\Desktop\buscado 2.0\BuscadoDesktop\BuscadoDesktop\obj\Release\BuscadoDesktop.Properties.Resources.resources
+C:\Users\vitok\Desktop\buscado 2.0\BuscadoDesktop\BuscadoDesktop\obj\Release\BuscadoDesktop.csproj.GenerateResource.cache
+C:\Users\vitok\Desktop\buscado 2.0\BuscadoDesktop\BuscadoDesktop\obj\Release\BuscadoDesktop.csproj.CoreCompileInputs.cache
+C:\Users\vitok\Desktop\buscado 2.0\BuscadoDesktop\BuscadoDesktop\obj\Release\BuscadoDesktop.csproj.CopyComplete
+C:\Users\vitok\Desktop\buscado 2.0\BuscadoDesktop\BuscadoDesktop\obj\Release\BuscadoDesktop.exe
+C:\Users\vitok\Desktop\buscado 2.0\BuscadoDesktop\BuscadoDesktop\obj\Release\BuscadoDesktop.pdb
+C:\Users\vitok\Desktop\buscado 2.0\BuscadoDesktop\BuscadoDesktop\obj\Release\BuscadoDesktop.FormCriarSetor.resources

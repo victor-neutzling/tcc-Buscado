@@ -1,0 +1,287 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BuscadoModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="BuscadoEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Administrador" EntityType="BuscadoModel.Administrador" />
+    <EntitySet Name="Email" EntityType="BuscadoModel.Email" />
+    <EntitySet Name="Empresa" EntityType="BuscadoModel.Empresa" />
+    <EntitySet Name="Mercado" EntityType="BuscadoModel.Mercado" />
+    <EntitySet Name="Mercado_has_Produto" EntityType="BuscadoModel.Mercado_has_Produto" />
+    <EntitySet Name="Mercado_has_Produto_has_Setor" EntityType="BuscadoModel.Mercado_has_Produto_has_Setor" />
+    <EntitySet Name="Oferta" EntityType="BuscadoModel.Oferta" />
+    <EntitySet Name="Produto" EntityType="BuscadoModel.Produto" />
+    <EntitySet Name="Setor" EntityType="BuscadoModel.Setor" />
+    <EntitySet Name="Telefone" EntityType="BuscadoModel.Telefone" />
+    <AssociationSet Name="FK__Administr__idMer__3A81B327" Association="BuscadoModel.FK__Administr__idMer__3A81B327">
+      <End Role="Mercado" EntitySet="Mercado" />
+      <End Role="Administrador" EntitySet="Administrador" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Email__idMercado__267ABA7A" Association="BuscadoModel.FK__Email__idMercado__267ABA7A">
+      <End Role="Mercado" EntitySet="Mercado" />
+      <End Role="Email" EntitySet="Email" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Produto__idEmpre__2E1BDC42" Association="BuscadoModel.FK__Produto__idEmpre__2E1BDC42">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="Produto" EntitySet="Produto" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Mercado_h__idMer__33D4B598" Association="BuscadoModel.FK__Mercado_h__idMer__33D4B598">
+      <End Role="Mercado" EntitySet="Mercado" />
+      <End Role="Mercado_has_Produto" EntitySet="Mercado_has_Produto" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Setor__idMercado__4E88ABD4" Association="BuscadoModel.FK__Setor__idMercado__4E88ABD4">
+      <End Role="Mercado" EntitySet="Mercado" />
+      <End Role="Setor" EntitySet="Setor" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Telefone__idMerc__29572725" Association="BuscadoModel.FK__Telefone__idMerc__29572725">
+      <End Role="Mercado" EntitySet="Mercado" />
+      <End Role="Telefone" EntitySet="Telefone" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Mercado_h__idMer__4BAC3F29" Association="BuscadoModel.FK__Mercado_h__idMer__4BAC3F29">
+      <End Role="Mercado_has_Produto" EntitySet="Mercado_has_Produto" />
+      <End Role="Mercado_has_Produto_has_Setor" EntitySet="Mercado_has_Produto_has_Setor" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Mercado_h__idPro__32E0915F" Association="BuscadoModel.FK__Mercado_h__idPro__32E0915F">
+      <End Role="Produto" EntitySet="Produto" />
+      <End Role="Mercado_has_Produto" EntitySet="Mercado_has_Produto" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Oferta__idMercad__37A5467C" Association="BuscadoModel.FK__Oferta__idMercad__37A5467C">
+      <End Role="Mercado_has_Produto" EntitySet="Mercado_has_Produto" />
+      <End Role="Oferta" EntitySet="Oferta" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Mercado_h__idSet__4AB81AF0" Association="BuscadoModel.FK__Mercado_h__idSet__4AB81AF0">
+      <End Role="Setor" EntitySet="Setor" />
+      <End Role="Mercado_has_Produto_has_Setor" EntitySet="Mercado_has_Produto_has_Setor" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Administrador">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="idMercado" Type="Int32" />
+    <Property Name="Usuario" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Senha" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Nome" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Mercado" Relationship="BuscadoModel.FK__Administr__idMer__3A81B327" FromRole="Administrador" ToRole="Mercado" />
+  </EntityType>
+  <EntityType Name="Email">
+    <Key>
+      <PropertyRef Name="idEmail" />
+    </Key>
+    <Property Name="idEmail" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="idMercado" Type="Int32" Nullable="false" />
+    <Property Name="Email1" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Mercado" Relationship="BuscadoModel.FK__Email__idMercado__267ABA7A" FromRole="Email" ToRole="Mercado" />
+  </EntityType>
+  <EntityType Name="Empresa">
+    <Key>
+      <PropertyRef Name="idEmpresa" />
+    </Key>
+    <Property Name="idEmpresa" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NomeEmpresa" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Produto" Relationship="BuscadoModel.FK__Produto__idEmpre__2E1BDC42" FromRole="Empresa" ToRole="Produto" />
+  </EntityType>
+  <EntityType Name="Mercado">
+    <Key>
+      <PropertyRef Name="idMercado" />
+    </Key>
+    <Property Name="idMercado" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nome" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Rua" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Bairro" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="Cidade" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="CEP" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Name="Numero" Type="Int32" />
+    <Property Name="Complemento" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="Estado" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Administrador" Relationship="BuscadoModel.FK__Administr__idMer__3A81B327" FromRole="Mercado" ToRole="Administrador" />
+    <NavigationProperty Name="Email" Relationship="BuscadoModel.FK__Email__idMercado__267ABA7A" FromRole="Mercado" ToRole="Email" />
+    <NavigationProperty Name="Mercado_has_Produto" Relationship="BuscadoModel.FK__Mercado_h__idMer__33D4B598" FromRole="Mercado" ToRole="Mercado_has_Produto" />
+    <NavigationProperty Name="Setor" Relationship="BuscadoModel.FK__Setor__idMercado__4E88ABD4" FromRole="Mercado" ToRole="Setor" />
+    <NavigationProperty Name="Telefone" Relationship="BuscadoModel.FK__Telefone__idMerc__29572725" FromRole="Mercado" ToRole="Telefone" />
+  </EntityType>
+  <EntityType Name="Mercado_has_Produto">
+    <Key>
+      <PropertyRef Name="idMercado_has_Produto" />
+    </Key>
+    <Property Name="idMercado_has_Produto" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="idProduto" Type="Int32" />
+    <Property Name="idMercado" Type="Int32" />
+    <Property Name="Preco" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+    <Property Name="Corredor" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Mercado" Relationship="BuscadoModel.FK__Mercado_h__idMer__33D4B598" FromRole="Mercado_has_Produto" ToRole="Mercado" />
+    <NavigationProperty Name="Mercado_has_Produto_has_Setor" Relationship="BuscadoModel.FK__Mercado_h__idMer__4BAC3F29" FromRole="Mercado_has_Produto" ToRole="Mercado_has_Produto_has_Setor" />
+    <NavigationProperty Name="Produto" Relationship="BuscadoModel.FK__Mercado_h__idPro__32E0915F" FromRole="Mercado_has_Produto" ToRole="Produto" />
+    <NavigationProperty Name="Oferta" Relationship="BuscadoModel.FK__Oferta__idMercad__37A5467C" FromRole="Mercado_has_Produto" ToRole="Oferta" />
+  </EntityType>
+  <EntityType Name="Mercado_has_Produto_has_Setor">
+    <Key>
+      <PropertyRef Name="idMercado_has_Produto_has_Setor" />
+    </Key>
+    <Property Name="idSetor" Type="Int32" />
+    <Property Name="idMercado_has_Produto" Type="Int32" />
+    <Property Name="idMercado_has_Produto_has_Setor" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="Mercado_has_Produto" Relationship="BuscadoModel.FK__Mercado_h__idMer__4BAC3F29" FromRole="Mercado_has_Produto_has_Setor" ToRole="Mercado_has_Produto" />
+    <NavigationProperty Name="Setor" Relationship="BuscadoModel.FK__Mercado_h__idSet__4AB81AF0" FromRole="Mercado_has_Produto_has_Setor" ToRole="Setor" />
+  </EntityType>
+  <EntityType Name="Oferta">
+    <Key>
+      <PropertyRef Name="idOferta" />
+    </Key>
+    <Property Name="idOferta" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="idMercado_has_Produto" Type="Int32" />
+    <Property Name="Descricao" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Mercado_has_Produto" Relationship="BuscadoModel.FK__Oferta__idMercad__37A5467C" FromRole="Oferta" ToRole="Mercado_has_Produto" />
+  </EntityType>
+  <EntityType Name="Produto">
+    <Key>
+      <PropertyRef Name="idProduto" />
+    </Key>
+    <Property Name="idProduto" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nome" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="CodigoDeBarras" Type="String" Nullable="false" MaxLength="13" FixedLength="false" Unicode="false" />
+    <Property Name="Imagem" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="idEmpresa" Type="Int32" />
+    <NavigationProperty Name="Empresa" Relationship="BuscadoModel.FK__Produto__idEmpre__2E1BDC42" FromRole="Produto" ToRole="Empresa" />
+    <NavigationProperty Name="Mercado_has_Produto" Relationship="BuscadoModel.FK__Mercado_h__idPro__32E0915F" FromRole="Produto" ToRole="Mercado_has_Produto" />
+  </EntityType>
+  <EntityType Name="Setor">
+    <Key>
+      <PropertyRef Name="idSetor" />
+    </Key>
+    <Property Name="idSetor" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nome" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="Imagem" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="idMercado" Type="Int32" />
+    <NavigationProperty Name="Mercado" Relationship="BuscadoModel.FK__Setor__idMercado__4E88ABD4" FromRole="Setor" ToRole="Mercado" />
+    <NavigationProperty Name="Mercado_has_Produto_has_Setor" Relationship="BuscadoModel.FK__Mercado_h__idSet__4AB81AF0" FromRole="Setor" ToRole="Mercado_has_Produto_has_Setor" />
+  </EntityType>
+  <EntityType Name="Telefone">
+    <Key>
+      <PropertyRef Name="idTelefone" />
+    </Key>
+    <Property Name="idTelefone" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="idMercado" Type="Int32" Nullable="false" />
+    <Property Name="Telefone1" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Mercado" Relationship="BuscadoModel.FK__Telefone__idMerc__29572725" FromRole="Telefone" ToRole="Mercado" />
+  </EntityType>
+  <Association Name="FK__Administr__idMer__3A81B327">
+    <End Type="BuscadoModel.Mercado" Role="Mercado" Multiplicity="0..1" />
+    <End Type="BuscadoModel.Administrador" Role="Administrador" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Mercado">
+        <PropertyRef Name="idMercado" />
+      </Principal>
+      <Dependent Role="Administrador">
+        <PropertyRef Name="idMercado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Email__idMercado__267ABA7A">
+    <End Type="BuscadoModel.Mercado" Role="Mercado" Multiplicity="1" />
+    <End Type="BuscadoModel.Email" Role="Email" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Mercado">
+        <PropertyRef Name="idMercado" />
+      </Principal>
+      <Dependent Role="Email">
+        <PropertyRef Name="idMercado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Produto__idEmpre__2E1BDC42">
+    <End Type="BuscadoModel.Empresa" Role="Empresa" Multiplicity="0..1" />
+    <End Type="BuscadoModel.Produto" Role="Produto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="idEmpresa" />
+      </Principal>
+      <Dependent Role="Produto">
+        <PropertyRef Name="idEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Mercado_h__idMer__33D4B598">
+    <End Type="BuscadoModel.Mercado" Role="Mercado" Multiplicity="0..1" />
+    <End Type="BuscadoModel.Mercado_has_Produto" Role="Mercado_has_Produto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Mercado">
+        <PropertyRef Name="idMercado" />
+      </Principal>
+      <Dependent Role="Mercado_has_Produto">
+        <PropertyRef Name="idMercado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Setor__idMercado__4E88ABD4">
+    <End Type="BuscadoModel.Mercado" Role="Mercado" Multiplicity="0..1" />
+    <End Type="BuscadoModel.Setor" Role="Setor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Mercado">
+        <PropertyRef Name="idMercado" />
+      </Principal>
+      <Dependent Role="Setor">
+        <PropertyRef Name="idMercado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Telefone__idMerc__29572725">
+    <End Type="BuscadoModel.Mercado" Role="Mercado" Multiplicity="1" />
+    <End Type="BuscadoModel.Telefone" Role="Telefone" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Mercado">
+        <PropertyRef Name="idMercado" />
+      </Principal>
+      <Dependent Role="Telefone">
+        <PropertyRef Name="idMercado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Mercado_h__idMer__4BAC3F29">
+    <End Type="BuscadoModel.Mercado_has_Produto" Role="Mercado_has_Produto" Multiplicity="0..1" />
+    <End Type="BuscadoModel.Mercado_has_Produto_has_Setor" Role="Mercado_has_Produto_has_Setor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Mercado_has_Produto">
+        <PropertyRef Name="idMercado_has_Produto" />
+      </Principal>
+      <Dependent Role="Mercado_has_Produto_has_Setor">
+        <PropertyRef Name="idMercado_has_Produto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Mercado_h__idPro__32E0915F">
+    <End Type="BuscadoModel.Produto" Role="Produto" Multiplicity="0..1" />
+    <End Type="BuscadoModel.Mercado_has_Produto" Role="Mercado_has_Produto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Produto">
+        <PropertyRef Name="idProduto" />
+      </Principal>
+      <Dependent Role="Mercado_has_Produto">
+        <PropertyRef Name="idProduto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Oferta__idMercad__37A5467C">
+    <End Type="BuscadoModel.Mercado_has_Produto" Role="Mercado_has_Produto" Multiplicity="0..1" />
+    <End Type="BuscadoModel.Oferta" Role="Oferta" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Mercado_has_Produto">
+        <PropertyRef Name="idMercado_has_Produto" />
+      </Principal>
+      <Dependent Role="Oferta">
+        <PropertyRef Name="idMercado_has_Produto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Mercado_h__idSet__4AB81AF0">
+    <End Type="BuscadoModel.Setor" Role="Setor" Multiplicity="0..1" />
+    <End Type="BuscadoModel.Mercado_has_Produto_has_Setor" Role="Mercado_has_Produto_has_Setor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Setor">
+        <PropertyRef Name="idSetor" />
+      </Principal>
+      <Dependent Role="Mercado_has_Produto_has_Setor">
+        <PropertyRef Name="idSetor" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

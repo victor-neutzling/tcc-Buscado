@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="BuscadoModelStoreContainer" CdmEntityContainer="BuscadoEntities">
+    <EntitySetMapping Name="Administrador">
+      <EntityTypeMapping TypeName="BuscadoModel.Administrador">
+        <MappingFragment StoreEntitySet="Administrador">
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="Senha" ColumnName="Senha" />
+          <ScalarProperty Name="Usuario" ColumnName="Usuario" />
+          <ScalarProperty Name="idMercado" ColumnName="idMercado" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Email">
+      <EntityTypeMapping TypeName="BuscadoModel.Email">
+        <MappingFragment StoreEntitySet="Email">
+          <ScalarProperty Name="Email1" ColumnName="Email1" />
+          <ScalarProperty Name="idMercado" ColumnName="idMercado" />
+          <ScalarProperty Name="idEmail" ColumnName="idEmail" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Empresa">
+      <EntityTypeMapping TypeName="BuscadoModel.Empresa">
+        <MappingFragment StoreEntitySet="Empresa">
+          <ScalarProperty Name="NomeEmpresa" ColumnName="NomeEmpresa" />
+          <ScalarProperty Name="idEmpresa" ColumnName="idEmpresa" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Mercado">
+      <EntityTypeMapping TypeName="BuscadoModel.Mercado">
+        <MappingFragment StoreEntitySet="Mercado">
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="Complemento" ColumnName="Complemento" />
+          <ScalarProperty Name="Numero" ColumnName="Numero" />
+          <ScalarProperty Name="CEP" ColumnName="CEP" />
+          <ScalarProperty Name="Cidade" ColumnName="Cidade" />
+          <ScalarProperty Name="Bairro" ColumnName="Bairro" />
+          <ScalarProperty Name="Rua" ColumnName="Rua" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="idMercado" ColumnName="idMercado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Mercado_has_Produto">
+      <EntityTypeMapping TypeName="BuscadoModel.Mercado_has_Produto">
+        <MappingFragment StoreEntitySet="Mercado_has_Produto">
+          <ScalarProperty Name="Corredor" ColumnName="Corredor" />
+          <ScalarProperty Name="Preco" ColumnName="Preco" />
+          <ScalarProperty Name="idMercado" ColumnName="idMercado" />
+          <ScalarProperty Name="idProduto" ColumnName="idProduto" />
+          <ScalarProperty Name="idMercado_has_Produto" ColumnName="idMercado_has_Produto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Mercado_has_Produto_has_Setor">
+      <EntityTypeMapping TypeName="BuscadoModel.Mercado_has_Produto_has_Setor">
+        <MappingFragment StoreEntitySet="Mercado_has_Produto_has_Setor">
+          <ScalarProperty Name="idMercado_has_Produto_has_Setor" ColumnName="idMercado_has_Produto_has_Setor" />
+          <ScalarProperty Name="idMercado_has_Produto" ColumnName="idMercado_has_Produto" />
+          <ScalarProperty Name="idSetor" ColumnName="idSetor" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Oferta">
+      <EntityTypeMapping TypeName="BuscadoModel.Oferta">
+        <MappingFragment StoreEntitySet="Oferta">
+          <ScalarProperty Name="Descricao" ColumnName="Descricao" />
+          <ScalarProperty Name="idMercado_has_Produto" ColumnName="idMercado_has_Produto" />
+          <ScalarProperty Name="idOferta" ColumnName="idOferta" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Produto">
+      <EntityTypeMapping TypeName="BuscadoModel.Produto">
+        <MappingFragment StoreEntitySet="Produto">
+          <ScalarProperty Name="idEmpresa" ColumnName="idEmpresa" />
+          <ScalarProperty Name="Imagem" ColumnName="Imagem" />
+          <ScalarProperty Name="CodigoDeBarras" ColumnName="CodigoDeBarras" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="idProduto" ColumnName="idProduto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Setor">
+      <EntityTypeMapping TypeName="BuscadoModel.Setor">
+        <MappingFragment StoreEntitySet="Setor">
+          <ScalarProperty Name="idMercado" ColumnName="idMercado" />
+          <ScalarProperty Name="Imagem" ColumnName="Imagem" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="idSetor" ColumnName="idSetor" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Telefone">
+      <EntityTypeMapping TypeName="BuscadoModel.Telefone">
+        <MappingFragment StoreEntitySet="Telefone">
+          <ScalarProperty Name="Telefone1" ColumnName="Telefone1" />
+          <ScalarProperty Name="idMercado" ColumnName="idMercado" />
+          <ScalarProperty Name="idTelefone" ColumnName="idTelefone" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

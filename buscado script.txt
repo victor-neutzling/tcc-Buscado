@@ -1,0 +1,78 @@
+CREATE DATABASE Buscado
+GO
+USE Buscado
+GO
+CREATE TABLE Mercado(
+idMercado INT PRIMARY KEY IDENTITY NOT NULL,
+Nome VARCHAR(50) NOT NULL,
+Rua VARCHAR(255),
+Bairro VARCHAR(60),
+Cidade VARCHAR(30),
+CEP VARCHAR(8), --perguntar para o professor, int ou varchar
+Estado VARCHAR(MAX),
+Numero INT,
+Complemento VARCHAR(40)
+)
+GO
+CREATE TABLE Email(
+idEmail INT PRIMARY KEY IDENTITY NOT NULL,
+Email1 VARCHAR(100) NOT NULL,
+idMercado INT FOREIGN KEY REFERENCES Mercado(idMercado) NOT NULL
+)
+GO
+CREATE TABLE Telefone(
+idTelefone INT PRIMARY KEY IDENTITY NOT NULL,
+Telefone1 VARCHAR(12) NOT NULL,
+idMercado INT FOREIGN KEY REFERENCES Mercado(idMercado) NOT NULL
+)
+GO
+CREATE TABLE Empresa(
+idEmpresa INT PRIMARY KEY IDENTITY NOT NULL,
+NomeEmpresa VARCHAR(255) NOT NULL
+)
+GO
+CREATE TABLE Produto(
+idProduto INT PRIMARY KEY IDENTITY NOT NULL,
+Nome VARCHAR(255) NOT NULL,
+CodigoDeBarras VARCHAR(13) NOT NULL,
+Imagem VARCHAR(MAX),
+idEmpresa INT FOREIGN KEY REFERENCES Empresa(idEmpresa)
+)
+GO
+CREATE TABLE Categoria(
+idCategoria INT PRIMARY KEY IDENTITY NOT NULL,
+Nome VARCHAR(MAX) NOT NULL,
+Imagem VARCHAR(MAX)
+)
+GO
+CREATE TABLE Mercado_has_Produto(
+idMercado_has_Produto INT PRIMARY KEY IDENTITY NOT NULL,
+idProduto INT FOREIGN KEY REFERENCES produto(idProduto),
+idMercado INT FOREIGN KEY REFERENCES mercado(idMercado),
+idCategoria INT FOREIGN KEY REFERENCES Categoria(idCategoria),
+Preco DECIMAL NOT NULL,
+Setor VARCHAR(50) NOT NULL,
+Corredor VARCHAR(50) NOT NULL
+)
+GO
+CREATE TABLE Oferta(
+idOferta INT PRIMARY KEY IDENTITY NOT NULL,
+idMercado_has_Produto INT FOREIGN KEY REFERENCES Mercado_has_Produto(idMercado_has_Produto),
+Descricao INT NOT NULL
+)
+CREATE TABLE Administrador(
+id INT PRIMARY KEY IDENTITY NOT NULL,
+idMercado INT FOREIGN KEY REFERENCES Mercado(idMercado),
+Usuario VARCHAR(MAX) NOT NULL,
+Senha VARCHAR(MAX) NOT NULL,
+Nome VARCHAR(MAX) NOT NULL
+)
+SELECT * FROM Mercado
+INSERT INTO Produto VALUES(
+'batata','123','111',1
+)
+INSert INTO Empresa VALUES(
+'cocacola')
+SELECT * FROM Empresa
+select*
+from Produto

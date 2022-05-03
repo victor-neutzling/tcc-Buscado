@@ -1,0 +1,267 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BuscadoModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Administrador">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="idMercado" Type="int" />
+    <Property Name="Usuario" Type="varchar(max)" Nullable="false" />
+    <Property Name="Senha" Type="varchar(max)" Nullable="false" />
+    <Property Name="Nome" Type="varchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Email">
+    <Key>
+      <PropertyRef Name="idEmail" />
+    </Key>
+    <Property Name="idEmail" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="idMercado" Type="int" Nullable="false" />
+    <Property Name="Email1" Type="varchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Empresa">
+    <Key>
+      <PropertyRef Name="idEmpresa" />
+    </Key>
+    <Property Name="idEmpresa" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NomeEmpresa" Type="varchar" MaxLength="255" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Mercado">
+    <Key>
+      <PropertyRef Name="idMercado" />
+    </Key>
+    <Property Name="idMercado" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nome" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Rua" Type="varchar" MaxLength="255" />
+    <Property Name="Bairro" Type="varchar" MaxLength="60" />
+    <Property Name="Cidade" Type="varchar" MaxLength="30" />
+    <Property Name="CEP" Type="varchar" MaxLength="8" />
+    <Property Name="Numero" Type="int" />
+    <Property Name="Complemento" Type="varchar" MaxLength="40" />
+    <Property Name="Estado" Type="varchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Mercado_has_Produto">
+    <Key>
+      <PropertyRef Name="idMercado_has_Produto" />
+    </Key>
+    <Property Name="idMercado_has_Produto" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="idProduto" Type="int" />
+    <Property Name="idMercado" Type="int" />
+    <Property Name="Preco" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="Corredor" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Mercado_has_Produto_has_Setor">
+    <Key>
+      <PropertyRef Name="idMercado_has_Produto_has_Setor" />
+    </Key>
+    <Property Name="idSetor" Type="int" />
+    <Property Name="idMercado_has_Produto" Type="int" />
+    <Property Name="idMercado_has_Produto_has_Setor" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Oferta">
+    <Key>
+      <PropertyRef Name="idOferta" />
+    </Key>
+    <Property Name="idOferta" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="idMercado_has_Produto" Type="int" />
+    <Property Name="Descricao" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Produto">
+    <Key>
+      <PropertyRef Name="idProduto" />
+    </Key>
+    <Property Name="idProduto" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nome" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="CodigoDeBarras" Type="varchar" MaxLength="13" Nullable="false" />
+    <Property Name="Imagem" Type="varchar(max)" />
+    <Property Name="idEmpresa" Type="int" />
+  </EntityType>
+  <EntityType Name="Setor">
+    <Key>
+      <PropertyRef Name="idSetor" />
+    </Key>
+    <Property Name="idSetor" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nome" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="Imagem" Type="varchar(max)" />
+    <Property Name="idMercado" Type="int" />
+  </EntityType>
+  <EntityType Name="Telefone">
+    <Key>
+      <PropertyRef Name="idTelefone" />
+    </Key>
+    <Property Name="idTelefone" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="idMercado" Type="int" Nullable="false" />
+    <Property Name="Telefone1" Type="varchar" MaxLength="15" Nullable="false" />
+  </EntityType>
+  <Association Name="FK__Administr__idMer__3A81B327">
+    <End Role="Mercado" Type="Self.Mercado" Multiplicity="0..1" />
+    <End Role="Administrador" Type="Self.Administrador" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Mercado">
+        <PropertyRef Name="idMercado" />
+      </Principal>
+      <Dependent Role="Administrador">
+        <PropertyRef Name="idMercado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Email__idMercado__267ABA7A">
+    <End Role="Mercado" Type="Self.Mercado" Multiplicity="1" />
+    <End Role="Email" Type="Self.Email" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Mercado">
+        <PropertyRef Name="idMercado" />
+      </Principal>
+      <Dependent Role="Email">
+        <PropertyRef Name="idMercado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Mercado_h__idMer__33D4B598">
+    <End Role="Mercado" Type="Self.Mercado" Multiplicity="0..1" />
+    <End Role="Mercado_has_Produto" Type="Self.Mercado_has_Produto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Mercado">
+        <PropertyRef Name="idMercado" />
+      </Principal>
+      <Dependent Role="Mercado_has_Produto">
+        <PropertyRef Name="idMercado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Mercado_h__idMer__4BAC3F29">
+    <End Role="Mercado_has_Produto" Type="Self.Mercado_has_Produto" Multiplicity="0..1" />
+    <End Role="Mercado_has_Produto_has_Setor" Type="Self.Mercado_has_Produto_has_Setor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Mercado_has_Produto">
+        <PropertyRef Name="idMercado_has_Produto" />
+      </Principal>
+      <Dependent Role="Mercado_has_Produto_has_Setor">
+        <PropertyRef Name="idMercado_has_Produto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Mercado_h__idPro__32E0915F">
+    <End Role="Produto" Type="Self.Produto" Multiplicity="0..1" />
+    <End Role="Mercado_has_Produto" Type="Self.Mercado_has_Produto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Produto">
+        <PropertyRef Name="idProduto" />
+      </Principal>
+      <Dependent Role="Mercado_has_Produto">
+        <PropertyRef Name="idProduto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Mercado_h__idSet__4AB81AF0">
+    <End Role="Setor" Type="Self.Setor" Multiplicity="0..1" />
+    <End Role="Mercado_has_Produto_has_Setor" Type="Self.Mercado_has_Produto_has_Setor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Setor">
+        <PropertyRef Name="idSetor" />
+      </Principal>
+      <Dependent Role="Mercado_has_Produto_has_Setor">
+        <PropertyRef Name="idSetor" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Oferta__idMercad__37A5467C">
+    <End Role="Mercado_has_Produto" Type="Self.Mercado_has_Produto" Multiplicity="0..1" />
+    <End Role="Oferta" Type="Self.Oferta" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Mercado_has_Produto">
+        <PropertyRef Name="idMercado_has_Produto" />
+      </Principal>
+      <Dependent Role="Oferta">
+        <PropertyRef Name="idMercado_has_Produto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Produto__idEmpre__2E1BDC42">
+    <End Role="Empresa" Type="Self.Empresa" Multiplicity="0..1" />
+    <End Role="Produto" Type="Self.Produto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="idEmpresa" />
+      </Principal>
+      <Dependent Role="Produto">
+        <PropertyRef Name="idEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Setor__idMercado__4E88ABD4">
+    <End Role="Mercado" Type="Self.Mercado" Multiplicity="0..1" />
+    <End Role="Setor" Type="Self.Setor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Mercado">
+        <PropertyRef Name="idMercado" />
+      </Principal>
+      <Dependent Role="Setor">
+        <PropertyRef Name="idMercado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Telefone__idMerc__29572725">
+    <End Role="Mercado" Type="Self.Mercado" Multiplicity="1" />
+    <End Role="Telefone" Type="Self.Telefone" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Mercado">
+        <PropertyRef Name="idMercado" />
+      </Principal>
+      <Dependent Role="Telefone">
+        <PropertyRef Name="idMercado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="BuscadoModelStoreContainer">
+    <EntitySet Name="Administrador" EntityType="Self.Administrador" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Email" EntityType="Self.Email" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Empresa" EntityType="Self.Empresa" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Mercado" EntityType="Self.Mercado" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Mercado_has_Produto" EntityType="Self.Mercado_has_Produto" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Mercado_has_Produto_has_Setor" EntityType="Self.Mercado_has_Produto_has_Setor" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Oferta" EntityType="Self.Oferta" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Produto" EntityType="Self.Produto" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Setor" EntityType="Self.Setor" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Telefone" EntityType="Self.Telefone" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__Administr__idMer__3A81B327" Association="Self.FK__Administr__idMer__3A81B327">
+      <End Role="Mercado" EntitySet="Mercado" />
+      <End Role="Administrador" EntitySet="Administrador" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Email__idMercado__267ABA7A" Association="Self.FK__Email__idMercado__267ABA7A">
+      <End Role="Mercado" EntitySet="Mercado" />
+      <End Role="Email" EntitySet="Email" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Mercado_h__idMer__33D4B598" Association="Self.FK__Mercado_h__idMer__33D4B598">
+      <End Role="Mercado" EntitySet="Mercado" />
+      <End Role="Mercado_has_Produto" EntitySet="Mercado_has_Produto" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Mercado_h__idMer__4BAC3F29" Association="Self.FK__Mercado_h__idMer__4BAC3F29">
+      <End Role="Mercado_has_Produto" EntitySet="Mercado_has_Produto" />
+      <End Role="Mercado_has_Produto_has_Setor" EntitySet="Mercado_has_Produto_has_Setor" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Mercado_h__idPro__32E0915F" Association="Self.FK__Mercado_h__idPro__32E0915F">
+      <End Role="Produto" EntitySet="Produto" />
+      <End Role="Mercado_has_Produto" EntitySet="Mercado_has_Produto" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Mercado_h__idSet__4AB81AF0" Association="Self.FK__Mercado_h__idSet__4AB81AF0">
+      <End Role="Setor" EntitySet="Setor" />
+      <End Role="Mercado_has_Produto_has_Setor" EntitySet="Mercado_has_Produto_has_Setor" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Oferta__idMercad__37A5467C" Association="Self.FK__Oferta__idMercad__37A5467C">
+      <End Role="Mercado_has_Produto" EntitySet="Mercado_has_Produto" />
+      <End Role="Oferta" EntitySet="Oferta" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Produto__idEmpre__2E1BDC42" Association="Self.FK__Produto__idEmpre__2E1BDC42">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="Produto" EntitySet="Produto" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Setor__idMercado__4E88ABD4" Association="Self.FK__Setor__idMercado__4E88ABD4">
+      <End Role="Mercado" EntitySet="Mercado" />
+      <End Role="Setor" EntitySet="Setor" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Telefone__idMerc__29572725" Association="Self.FK__Telefone__idMerc__29572725">
+      <End Role="Mercado" EntitySet="Mercado" />
+      <End Role="Telefone" EntitySet="Telefone" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
