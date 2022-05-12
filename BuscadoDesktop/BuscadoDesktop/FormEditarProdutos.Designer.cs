@@ -1,6 +1,6 @@
 ﻿namespace BuscadoDesktop
 {
-    partial class FormAdicionarProduto
+    partial class FormEditarProdutos
     {
         /// <summary>
         /// Required designer variable.
@@ -68,7 +68,7 @@
             this.label2.Size = new System.Drawing.Size(67, 25);
             this.label2.TabIndex = 1;
             this.label2.Text = "label2";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            
             // 
             // label3
             // 
@@ -91,7 +91,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            
             // 
             // label5
             // 
@@ -126,7 +126,7 @@
             this.btVoltar.TabIndex = 8;
             this.btVoltar.Text = "Voltar";
             this.btVoltar.UseVisualStyleBackColor = false;
-            this.btVoltar.Click += new System.EventHandler(this.button1_Click);
+            
             // 
             // btConfirmar
             // 
@@ -139,7 +139,7 @@
             this.btConfirmar.TabIndex = 9;
             this.btConfirmar.Text = "Confirmar";
             this.btConfirmar.UseVisualStyleBackColor = false;
-            this.btConfirmar.Click += new System.EventHandler(this.btConfirmar_Click);
+           
             // 
             // label6
             // 
@@ -174,7 +174,7 @@
             this.label7.Size = new System.Drawing.Size(312, 16);
             this.label7.TabIndex = 12;
             this.label7.Text = "O preço deve ser inserido em fomato __.__ (Ex.: 2.99, 15.35)";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
+           
             // 
             // comboSetor
             // 
@@ -210,7 +210,7 @@
             this.button1.TabIndex = 14;
             this.button1.Text = "Criar Novo Setor";
             this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            
             // 
             // FormAdicionarProduto
             // 

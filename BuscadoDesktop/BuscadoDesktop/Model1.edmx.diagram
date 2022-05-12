@@ -5,16 +5,16 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="8d753f43adc845b9a20592f2ef7a7906" Name="Diagram1" ZoomLevel="82">
-        <EntityTypeShape EntityType="BuscadoModel.Administrador" Width="1.5" PointX="3" PointY="4.875" />
-        <EntityTypeShape EntityType="BuscadoModel.Email" Width="1.5" PointX="3" PointY="14.25" />
+        <EntityTypeShape EntityType="BuscadoModel.Administrador" Width="1.5" PointX="3" PointY="16.375" />
+        <EntityTypeShape EntityType="BuscadoModel.Email" Width="1.5" PointX="3" PointY="4.875" />
         <EntityTypeShape EntityType="BuscadoModel.Empresa" Width="1.5" PointX="1.5" PointY="2.25" />
         <EntityTypeShape EntityType="BuscadoModel.Mercado" Width="1.5" PointX="0.75" PointY="8.125" />
         <EntityTypeShape EntityType="BuscadoModel.Mercado_has_Produto" Width="1.5" PointX="6" PointY="8.5" />
-        <EntityTypeShape EntityType="BuscadoModel.Mercado_has_Produto_has_Setor" Width="1.5" PointX="8.25" PointY="8.5" />
+        <EntityTypeShape EntityType="BuscadoModel.Mercado_has_Produto_has_Setor" Width="1.5" PointX="8.25" PointY="8.375" />
         <EntityTypeShape EntityType="BuscadoModel.Oferta" Width="1.5" PointX="8.25" PointY="11.75" />
         <EntityTypeShape EntityType="BuscadoModel.Produto" Width="1.5" PointX="3.75" PointY="0.75" />
-        <EntityTypeShape EntityType="BuscadoModel.Setor" Width="1.5" PointX="3" PointY="7.75" />
-        <EntityTypeShape EntityType="BuscadoModel.Telefone" Width="1.5" PointX="3" PointY="16.75" />
+        <EntityTypeShape EntityType="BuscadoModel.Setor" Width="1.5" PointX="3" PointY="7.375" />
+        <EntityTypeShape EntityType="BuscadoModel.Telefone" Width="1.5" PointX="3" PointY="13.75" />
         <AssociationConnector Association="BuscadoModel.FK__Administr__idMer__3A81B327" />
         <AssociationConnector Association="BuscadoModel.FK__Email__idMercado__267ABA7A" />
         <AssociationConnector Association="BuscadoModel.FK__Produto__idEmpre__2E1BDC42" />

@@ -113,6 +113,7 @@
             this.tbLink.Name = "tbLink";
             this.tbLink.Size = new System.Drawing.Size(208, 26);
             this.tbLink.TabIndex = 6;
+            this.tbLink.TextChanged += new System.EventHandler(this.tbLink_TextChanged);
             // 
             // btVoltar
             // 

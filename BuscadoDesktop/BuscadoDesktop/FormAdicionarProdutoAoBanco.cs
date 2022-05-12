@@ -49,5 +49,10 @@ namespace BuscadoDesktop
             Hide();
             formModoEditor.ShowDialog();
         }
+
+        private void tbLink_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

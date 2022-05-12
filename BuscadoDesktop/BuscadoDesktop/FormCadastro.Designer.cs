@@ -42,8 +42,12 @@
             this.tbNumero = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.tbEstado = new System.Windows.Forms.ComboBox();
+            this.mtbCep = new System.Windows.Forms.MaskedTextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.mtbTelefone = new System.Windows.Forms.MaskedTextBox();
+            this.mtbEmail = new System.Windows.Forms.MaskedTextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -61,10 +65,6 @@
             this.btConfirmar = new System.Windows.Forms.Button();
             this.label18 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.mtbEmail = new System.Windows.Forms.MaskedTextBox();
-            this.mtbCep = new System.Windows.Forms.MaskedTextBox();
-            this.mtbTelefone = new System.Windows.Forms.MaskedTextBox();
-            this.tbEstado = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -232,6 +232,24 @@
             this.groupBox1.TabIndex = 19;
             this.groupBox1.TabStop = false;
             // 
+            // tbEstado
+            // 
+            this.tbEstado.FormattingEnabled = true;
+            this.tbEstado.Location = new System.Drawing.Point(81, 188);
+            this.tbEstado.Name = "tbEstado";
+            this.tbEstado.Size = new System.Drawing.Size(232, 29);
+            this.tbEstado.TabIndex = 18;
+            this.tbEstado.SelectedIndexChanged += new System.EventHandler(this.tbEstado_SelectedIndexChanged);
+            // 
+            // mtbCep
+            // 
+            this.mtbCep.Font = new System.Drawing.Font("Microsoft YaHei", 12.25F);
+            this.mtbCep.Location = new System.Drawing.Point(81, 258);
+            this.mtbCep.Mask = "00000-000";
+            this.mtbCep.Name = "mtbCep";
+            this.mtbCep.Size = new System.Drawing.Size(232, 29);
+            this.mtbCep.TabIndex = 17;
+            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -259,6 +277,23 @@
             this.groupBox2.Size = new System.Drawing.Size(333, 128);
             this.groupBox2.TabIndex = 20;
             this.groupBox2.TabStop = false;
+            // 
+            // mtbTelefone
+            // 
+            this.mtbTelefone.Font = new System.Drawing.Font("Microsoft YaHei", 12.25F);
+            this.mtbTelefone.Location = new System.Drawing.Point(88, 48);
+            this.mtbTelefone.Mask = "(00)00000-0000";
+            this.mtbTelefone.Name = "mtbTelefone";
+            this.mtbTelefone.Size = new System.Drawing.Size(225, 29);
+            this.mtbTelefone.TabIndex = 17;
+            // 
+            // mtbEmail
+            // 
+            this.mtbEmail.Font = new System.Drawing.Font("Microsoft YaHei", 12.25F);
+            this.mtbEmail.Location = new System.Drawing.Point(88, 83);
+            this.mtbEmail.Name = "mtbEmail";
+            this.mtbEmail.Size = new System.Drawing.Size(225, 29);
+            this.mtbEmail.TabIndex = 16;
             // 
             // label10
             // 
@@ -467,41 +502,6 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // mtbEmail
-            // 
-            this.mtbEmail.Font = new System.Drawing.Font("Microsoft YaHei", 12.25F);
-            this.mtbEmail.Location = new System.Drawing.Point(88, 83);
-            this.mtbEmail.Name = "mtbEmail";
-            this.mtbEmail.Size = new System.Drawing.Size(225, 29);
-            this.mtbEmail.TabIndex = 16;
-            // 
-            // mtbCep
-            // 
-            this.mtbCep.Font = new System.Drawing.Font("Microsoft YaHei", 12.25F);
-            this.mtbCep.Location = new System.Drawing.Point(81, 258);
-            this.mtbCep.Mask = "00000-000";
-            this.mtbCep.Name = "mtbCep";
-            this.mtbCep.Size = new System.Drawing.Size(232, 29);
-            this.mtbCep.TabIndex = 17;
-            // 
-            // mtbTelefone
-            // 
-            this.mtbTelefone.Font = new System.Drawing.Font("Microsoft YaHei", 12.25F);
-            this.mtbTelefone.Location = new System.Drawing.Point(88, 48);
-            this.mtbTelefone.Mask = "(00)00000-0000";
-            this.mtbTelefone.Name = "mtbTelefone";
-            this.mtbTelefone.Size = new System.Drawing.Size(225, 29);
-            this.mtbTelefone.TabIndex = 17;
-            // 
-            // tbEstado
-            // 
-            this.tbEstado.FormattingEnabled = true;
-            this.tbEstado.Location = new System.Drawing.Point(81, 188);
-            this.tbEstado.Name = "tbEstado";
-            this.tbEstado.Size = new System.Drawing.Size(232, 29);
-            this.tbEstado.TabIndex = 18;
-            this.tbEstado.SelectedIndexChanged += new System.EventHandler(this.tbEstado_SelectedIndexChanged);
-            // 
             // FormCadastro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -520,6 +520,7 @@
             this.Name = "FormCadastro";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormCadastro";
+            this.Load += new System.EventHandler(this.FormCadastro_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);

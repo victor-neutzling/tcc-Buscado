@@ -156,5 +156,10 @@ namespace BuscadoDesktop
         {
 
         }
+
+        private void btCriarOferta_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
