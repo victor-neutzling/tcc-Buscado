@@ -16,7 +16,7 @@ namespace BuscadoDesktop
     {
         public int idOferta { get; set; }
         public Nullable<int> idMercado_has_Produto { get; set; }
-        public int Descricao { get; set; }
+        public string Descricao { get; set; }
     
         public virtual Mercado_has_Produto Mercado_has_Produto { get; set; }
     }

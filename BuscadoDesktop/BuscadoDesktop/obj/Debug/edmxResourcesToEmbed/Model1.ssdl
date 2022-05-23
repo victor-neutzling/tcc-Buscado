@@ -63,7 +63,7 @@
     </Key>
     <Property Name="idOferta" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="idMercado_has_Produto" Type="int" />
-    <Property Name="Descricao" Type="int" Nullable="false" />
+    <Property Name="Descricao" Type="varchar" MaxLength="255" Nullable="false" />
   </EntityType>
   <EntityType Name="Produto">
     <Key>

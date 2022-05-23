@@ -73,7 +73,7 @@ namespace BuscadoDesktop
                 context.SaveChanges();
 
                 var query = from Setor in context.Setor
-                            where nome == comboSetor.Text
+                            where Setor.Nome == comboSetor.Text
                             select Setor.idSetor;
 
                 Mercado_has_Produto_has_Setor mhphs = new Mercado_has_Produto_has_Setor();

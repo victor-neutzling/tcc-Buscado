@@ -104,6 +104,7 @@
             this.tbCodigodeBarras.Name = "tbCodigodeBarras";
             this.tbCodigodeBarras.Size = new System.Drawing.Size(194, 26);
             this.tbCodigodeBarras.TabIndex = 10;
+            this.tbCodigodeBarras.TextChanged += new System.EventHandler(this.tbCodigodeBarras_TextChanged);
             // 
             // tbDescricao
             // 
@@ -126,6 +127,7 @@
             this.btCriar.TabIndex = 14;
             this.btCriar.Text = "Criar ";
             this.btCriar.UseVisualStyleBackColor = false;
+            this.btCriar.Click += new System.EventHandler(this.btCriar_Click);
             // 
             // btVoltar
             // 
@@ -139,6 +141,7 @@
             this.btVoltar.TabIndex = 15;
             this.btVoltar.Text = "Voltar";
             this.btVoltar.UseVisualStyleBackColor = false;
+            this.btVoltar.Click += new System.EventHandler(this.btVoltar_Click);
             // 
             // FormCriarOferta
             // 
@@ -159,6 +162,7 @@
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormCriarOferta";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormCriarOferta";
             this.Load += new System.EventHandler(this.FormCriarOferta_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

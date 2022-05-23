@@ -138,6 +138,7 @@
             this.btVoltar.TabIndex = 15;
             this.btVoltar.Text = "Voltar";
             this.btVoltar.UseVisualStyleBackColor = false;
+            this.btVoltar.Click += new System.EventHandler(this.btVoltar_Click);
             // 
             // FormEditarOferta
             // 
@@ -177,5 +178,4 @@
         private System.Windows.Forms.Button btEditar;
         private System.Windows.Forms.Button btVoltar;
     }
-}
 }

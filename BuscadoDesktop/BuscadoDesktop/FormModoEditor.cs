@@ -33,6 +33,18 @@ namespace BuscadoDesktop
                             where Mercado.idMercado == id
                             select Mercado.Nome;
                 labelMercado.Text = query.FirstOrDefault();
+
+            }
+            using (var context = new BuscadoEntities())
+            {
+                var query2 = from Mercado_has_Produto in context.Mercado_has_Produto
+                             join Oferta in context.Oferta on Mercado_has_Produto.idMercado_has_Produto equals Oferta.idMercado_has_Produto
+                             where Mercado_has_Produto.idMercado == idMercado
+                             select Oferta.Descricao;
+                BindingSource bs = new BindingSource();
+                bs.DataSource = query2.ToList();
+                comboBoxOferta.DataSource = bs;
+
             }
         }
 
@@ -103,7 +115,11 @@ namespace BuscadoDesktop
 
         private void btEditarOferta_Click(object sender, EventArgs e)
         {
-
+            using (var form = new FormEditarOferta(comboBoxOferta.Text, idMercado))
+            {
+                this.Hide();
+                form.ShowDialog();
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -158,6 +174,17 @@ namespace BuscadoDesktop
         }
 
         private void btCriarOferta_Click(object sender, EventArgs e)
+        {
+            using (var context = new FormCriarOferta(idMercado))
+            {
+                this.Hide();
+                context.ShowDialog();
+                this.Show();
+                
+            }
+        }
+
+        private void button6_Click(object sender, EventArgs e)
         {
 
         }

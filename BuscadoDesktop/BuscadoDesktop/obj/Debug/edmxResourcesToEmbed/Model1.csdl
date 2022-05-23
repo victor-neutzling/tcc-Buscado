@@ -129,7 +129,7 @@
     </Key>
     <Property Name="idOferta" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="idMercado_has_Produto" Type="Int32" />
-    <Property Name="Descricao" Type="Int32" Nullable="false" />
+    <Property Name="Descricao" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
     <NavigationProperty Name="Mercado_has_Produto" Relationship="BuscadoModel.FK__Oferta__idMercad__37A5467C" FromRole="Oferta" ToRole="Mercado_has_Produto" />
   </EntityType>
   <EntityType Name="Produto">
