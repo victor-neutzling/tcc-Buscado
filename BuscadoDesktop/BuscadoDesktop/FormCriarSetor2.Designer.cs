@@ -1,6 +1,6 @@
 ﻿namespace BuscadoDesktop
 {
-    partial class FormEditarSetor
+    partial class FormCriarSetor2
     {
         /// <summary>
         /// Required designer variable.
@@ -31,7 +31,7 @@
             this.tbSetor = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btEditarSetor = new System.Windows.Forms.Button();
+            this.btConfirmar = new System.Windows.Forms.Button();
             this.btVoltar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -65,22 +65,22 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(5, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(196, 41);
+            this.label1.Size = new System.Drawing.Size(254, 41);
             this.label1.TabIndex = 10;
-            this.label1.Text = "Editar Setor";
+            this.label1.Text = "Adicionar Setor";
             // 
-            // btEditarSetor
+            // btConfirmar
             // 
-            this.btEditarSetor.BackColor = System.Drawing.Color.White;
-            this.btEditarSetor.FlatAppearance.BorderSize = 0;
-            this.btEditarSetor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btEditarSetor.Location = new System.Drawing.Point(282, 86);
-            this.btEditarSetor.Name = "btEditarSetor";
-            this.btEditarSetor.Size = new System.Drawing.Size(75, 23);
-            this.btEditarSetor.TabIndex = 14;
-            this.btEditarSetor.Text = "Confirmar";
-            this.btEditarSetor.UseVisualStyleBackColor = false;
-            this.btEditarSetor.Click += new System.EventHandler(this.btEditarSetor_Click);
+            this.btConfirmar.BackColor = System.Drawing.Color.White;
+            this.btConfirmar.FlatAppearance.BorderSize = 0;
+            this.btConfirmar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btConfirmar.Location = new System.Drawing.Point(282, 86);
+            this.btConfirmar.Name = "btConfirmar";
+            this.btConfirmar.Size = new System.Drawing.Size(75, 23);
+            this.btConfirmar.TabIndex = 14;
+            this.btConfirmar.Text = "Confirmar";
+            this.btConfirmar.UseVisualStyleBackColor = false;
+            this.btConfirmar.Click += new System.EventHandler(this.btConfirmar_Click);
             // 
             // btVoltar
             // 
@@ -95,19 +95,19 @@
             this.btVoltar.UseVisualStyleBackColor = false;
             this.btVoltar.Click += new System.EventHandler(this.btVoltar_Click);
             // 
-            // FormEditarSetor
+            // FormCriarSetor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::BuscadoDesktop.Properties.Resources.photo_1588421357574_87938a86fa28;
             this.ClientSize = new System.Drawing.Size(369, 121);
-            this.Controls.Add(this.btEditarSetor);
+            this.Controls.Add(this.btConfirmar);
             this.Controls.Add(this.btVoltar);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tbSetor);
             this.Controls.Add(this.label5);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FormEditarSetor";
+            this.Name = "FormCriarSetor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormCriarSetor";
             this.ResumeLayout(false);
@@ -120,7 +120,7 @@
         private System.Windows.Forms.TextBox tbSetor;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btEditarSetor;
+        private System.Windows.Forms.Button btConfirmar;
         private System.Windows.Forms.Button btVoltar;
     }
 }

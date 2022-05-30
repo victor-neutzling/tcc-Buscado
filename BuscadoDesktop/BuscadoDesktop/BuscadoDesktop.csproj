@@ -115,6 +115,12 @@
     <Compile Include="FormCriarSetor.Designer.cs">
       <DependentUpon>FormCriarSetor.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormCriarSetor2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCriarSetor2.Designer.cs">
+      <DependentUpon>FormCriarSetor2.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormEditarOferta.cs">
       <SubType>Form</SubType>
     </Compile>

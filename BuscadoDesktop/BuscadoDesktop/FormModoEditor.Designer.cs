@@ -186,6 +186,7 @@
             this.btCadastrarAdm.TabIndex = 12;
             this.btCadastrarAdm.Text = "Cadastrar";
             this.btCadastrarAdm.UseVisualStyleBackColor = false;
+            this.btCadastrarAdm.Click += new System.EventHandler(this.btCadastrarAdm_Click);
             // 
             // tbSenha
             // 
@@ -368,6 +369,7 @@
             this.button3.TabIndex = 25;
             this.button3.Text = "Excluir";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
@@ -395,6 +397,7 @@
             this.button5.TabIndex = 31;
             this.button5.Text = "Excluir";
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button6
             // 
@@ -422,6 +425,7 @@
             this.button7.TabIndex = 29;
             this.button7.Text = "Editar";
             this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // label9
             // 
