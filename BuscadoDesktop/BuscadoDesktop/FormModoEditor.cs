@@ -303,6 +303,10 @@ namespace BuscadoDesktop
             MessageBox.Show("Setor com sucesso", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
             this.Hide();
             this.ShowDialog();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
 
         }
     }

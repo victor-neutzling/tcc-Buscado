@@ -81,7 +81,12 @@ namespace BuscadoDesktop
                     }
                     else
                     {
-                        //login normal
+                        using (var context2 = new FormModoPesquisa((int)query.FirstOrDefault()))
+                        {
+                            this.Hide();
+                            context2.ShowDialog();
+                            this.Show();
+                        }
                     }
                 }
             }

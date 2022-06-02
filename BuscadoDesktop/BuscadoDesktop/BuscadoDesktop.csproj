@@ -145,6 +145,16 @@
     <Compile Include="FormModoEditor.Designer.cs">
       <DependentUpon>FormModoEditor.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormModoPesquisa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormModoPesquisa.Designer.cs">
+      <DependentUpon>FormModoPesquisa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GListBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GListBoxItem.cs" />
     <Compile Include="Mercado.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -209,6 +219,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormModoEditor.resx">
       <DependentUpon>FormModoEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormModoPesquisa.resx">
+      <DependentUpon>FormModoPesquisa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

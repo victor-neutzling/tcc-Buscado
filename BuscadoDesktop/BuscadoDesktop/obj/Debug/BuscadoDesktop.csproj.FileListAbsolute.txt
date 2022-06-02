@@ -128,3 +128,4 @@ C:\Users\Aluno\Desktop\tcc\tcc-Buscado\BuscadoDesktop\BuscadoDesktop\bin\Debug\E
 C:\Users\Aluno\Desktop\tcc\tcc-Buscado\BuscadoDesktop\BuscadoDesktop\bin\Debug\EntityFramework.xml
 C:\Users\Aluno\Desktop\tcc\tcc-Buscado\BuscadoDesktop\BuscadoDesktop\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Aluno\Desktop\tcc\tcc-Buscado\BuscadoDesktop\BuscadoDesktop\obj\Debug\BuscadoDesktop.csproj.CopyComplete
+C:\Users\Aluno\Desktop\tcc\tcc-Buscado\BuscadoDesktop\BuscadoDesktop\obj\Debug\BuscadoDesktop.FormModoPesquisa.resources
