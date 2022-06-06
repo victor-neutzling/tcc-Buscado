@@ -85,7 +85,7 @@ namespace BuscadoDesktop
                 context.SaveChanges();
             }
             MessageBox.Show("Produto Adicionado Com sucesso", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            FormCriarSetor cs = new FormCriarSetor(idMercado, idProduto, nome, codigo);
+            FormModoEditor cs = new FormModoEditor(idMercado);
             Hide();
             cs.ShowDialog();
         }
